@@ -1,4 +1,4 @@
-/* import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 import 'loginScreen.dart';
 import 'listview.dart';
@@ -15,9 +15,9 @@ class MyApp extends StatelessWidget {
       home: ClientPage(), 
     );
   }
-}  */
+}  
 
-import 'package:flutter/material.dart';
+/*import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
 
@@ -26,12 +26,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const appTitle = 'Form Styling Demo';
     return MaterialApp(
-      title: appTitle,
       home: Scaffold(
         appBar: AppBar(
-          title: const Text(appTitle),
         ),
         body: const MyCustomForm(),
       ),
@@ -39,78 +36,68 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyCustomForm extends StatelessWidget {
+ class MyCustomForm extends StatelessWidget {
   const MyCustomForm({key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        /*  const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: TextField(
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              hintText: 'Enter a search term',
-            ),
+    return Padding(
+      padding: const EdgeInsets.all(15.0),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Text(
+            'Société',
+            textAlign: TextAlign.left,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontWeight: FontWeight.bold),
           ),
-        ), */
-        Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-        child: Text(
-          'Société',
-          textAlign: TextAlign.center,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-         ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: TextFormField(
+          SizedBox(height: 10),
+          TextFormField(
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               labelText: 'Entrer la société',
             ),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-          child: TextFormField(
+          SizedBox(height: 5),
+          TextFormField(
             decoration: const InputDecoration(
               border: UnderlineInputBorder(),
               labelText: 'Numéro de la société',
             ),
           ),
-        ),
-        Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
-        child: Text(
-          'Notes',
-          textAlign: TextAlign.center,
-          overflow: TextOverflow.ellipsis,
-          style: const TextStyle(fontWeight: FontWeight.bold),
-        ),
-         ),
-         Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextFormField(
-                minLines: 2,
-                maxLines: 5,
-                keyboardType: TextInputType.multiline,
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(
-                    color: Colors.grey
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                  )
-                ),
-              ),
-            ),
-            ElevatedButton(onPressed: (){
-            },child: Text("Créer le client"),)
-      ],
+          SizedBox(height: 70),
+          Text(
+            'Notes',
+            textAlign: TextAlign.left,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          SizedBox(height: 10),
+          Container(
+        width: double.infinity,
+        height: double.infinity,
+          child:TextFormField(
+            minLines: 3,
+            maxLines: 7,
+            keyboardType: TextInputType.multiline,
+            decoration: InputDecoration(
+                hintStyle: TextStyle(color: Colors.grey),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                )),
+          ),),  
+          SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              "Créer le client",
+            textAlign: TextAlign.left,),
+          )
+        ],
+      ),
     );
-  }  
-}
+  }
+} */
